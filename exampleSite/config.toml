@@ -1,9 +1,9 @@
 # default configuration
-baseURL = "http://demo.gethugothemes.com/kross/"
+baseURL = "http://gw31415.github.io/kinokawa-string-theme/"
 languageCode = "en-us"
 summaryLength = "10"
 theme = "kinokawa-string-theme"
-title = "Kross"
+title = "Kinokawa String Theme"
 
 # css plugins
 [[params.plugins.css]]
@@ -54,7 +54,7 @@ weight = 4
 home = "Home"
 logo = ""
 # theme color
-theme_color = "#41228e"
+theme_color = "green"
 # contact info
 phone = "+880 2544 658 256"
 email = "steve.fruits@email.com"
