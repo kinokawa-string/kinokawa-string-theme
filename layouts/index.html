@@ -176,7 +176,7 @@
             <div class="card-body text-center px-4 py-5">
               <i class="{{.icon }} icon mb-5 d-inline-block"></i>
               <h4 class="mb-4">{{.title}}</h4>
-              <p>{{.content | markdownify}}</p>
+              <p>{{.content | safeHTML}}</p>
             </div>
           </div>
         </div>
