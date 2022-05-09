@@ -75,6 +75,20 @@
   <!-- /about -->
   {{ end }}
 
+  {{ if site.Data.homepage.pr.enable }}
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-title">{{site.Data.homepage.pr.category }}</h2>
+        </div>
+		{{ range first 2 ( where .Site.Pages ".Params.categories" "intersect" (slice site.Data.homepage.pr.category) )}}
+        {{ .Render "post" }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
 
   {{ if site.Data.homepage.skill.enable }}
   {{ with site.Data.homepage.skill }}

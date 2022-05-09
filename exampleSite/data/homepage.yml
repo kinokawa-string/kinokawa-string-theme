@@ -11,6 +11,10 @@ about:
     label : "know more"
     URL : "about"
 
+pr:
+  enable: true
+  category: "演奏会情報"
+
 # skill
 skill:
   enable : true
