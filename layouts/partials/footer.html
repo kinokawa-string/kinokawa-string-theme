@@ -37,24 +37,12 @@
   <div class="section">
     <div class="container">
       <div class="row">
-		{{ if site.Params.email }}
+        {{ range site.Params.social }}
         <div class="col-md-4">
-          <h5 class="text-light">Email</h5>
-          <p class="text-white paragraph-lg font-secondary"><a href="mailto:{{site.Params.email}}">{{site.Params.email}}</a></p>
+          <h5 class="text-light">{{.title}}</h5>
+          <p class="text-white paragraph-lg font-secondary"><a href="{{.URL | safeURL }}">{{.linkText}}</a></p>
         </div>
-		{{ end }}
-		{{ if site.Params.phone }}
-        <div class="col-md-4">
-          <h5 class="text-light">Phone</h5>
-          <p class="text-white paragraph-lg font-secondary"><a href="tel:{{site.Params.phone}}">{{site.Params.phone}}</a></p>
-        </div>
-		{{ end }}
-		{{ if site.Params.address }}
-        <div class="col-md-4">
-          <h5 class="text-light">Address</h5>
-          <p class="text-white paragraph-lg font-secondary">{{site.Params.address}}</p>
-        </div>
-		{{ end }}
+        {{ end }}
       </div>
     </div>
   </div>
