@@ -5,7 +5,7 @@ VERSION: Versoin Number
 -------------------------------------------------------------------*/
 body {
   line-height: 1.2;
-  font-family: roboto, sans-serif;
+  font-family: serif;
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
   color: #4c4c4c
@@ -16,7 +16,6 @@ p {
   color: #4c4c4c;
   font-size: 15px;
   line-height: 1.8;
-  font-family: roboto, sans-serif
 }
 
 h1,
@@ -26,7 +25,6 @@ h4,
 h5,
 h6 {
   color: #000;
-  font-family: playfair display, serif;
   line-height: 1.2
 }
 
@@ -86,7 +84,6 @@ h6,
 
 .btn {
   font-size: 22px;
-  font-family: playfair display, serif;
   text-transform: capitalize;
   padding: 16px 44px;
   border-radius: 5px;
@@ -217,7 +214,6 @@ a:hover {
 
 .section-title {
   margin-bottom: 80px;
-  font-family: serif;
   font-weight: 700;
 }
 
@@ -326,16 +322,7 @@ a:hover {
   overflow: hidden
 }
 
-.font-primary {
-  font-family: roboto, serif !important
-}
-
 .font-secondary {
-  font-family: playfair display, serif !important
-}
-
-.font-secondary {
-  font-family: serif;
   font-weight: 700 !important;
 }
 
@@ -415,7 +402,6 @@ textarea.form-control {
 }
 
 .navbar .nav-item .nav-link {
-  font-family: serif;
   font-weight: 700;
   text-transform: uppercase;
   padding: 15px
@@ -682,7 +668,6 @@ blockquote {
 }
 
 .content strong {
-  font-family: playfair display, serif;
   font-size: 22px;
   font-weight: 400;
   color: #000;
