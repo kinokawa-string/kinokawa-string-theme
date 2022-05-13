@@ -1,9 +1,11 @@
 {{ if site.Params.preloader.enable }}
 {{ "<!-- preloader start -->" | safeHTML }}
-<div class="preloader">
-  {{ if ne site.Params.preloader.preloader "" }}
-  <img decoding="async" src="{{ site.Params.preloader.preloader | relURL }} " alt="preloader">
-  {{ end }}
-</div>
+  <div class="preloader" style="background-color:{{ site.Params.theme_color }};font-size: 3ex;font-family:serif">
+    {{ if site.Params.preloader.content }}
+  	{{ site.Params.preloader.content | markdownify }}
+    {{ else }}
+  	Loading....
+    {{ end }}
+  </div>
 {{ "<!-- preloader end -->" | safeHTML }}
 {{ end }}

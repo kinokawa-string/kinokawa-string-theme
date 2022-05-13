@@ -64,7 +64,7 @@ copyright = "Copyright &copy; 2021 a Theme by [Gethugothemes](https://gethugothe
 # preloader
 [params.preloader]
 enable = true
-preloader = "images/preloader.gif" # use png, jpg, svg or gif format
+content = "Loading...♪"
 
 # contact
 [params.contact]
