@@ -12,35 +12,35 @@
 
   {{ if site.Data.homepage.topImage.enable }}
 	<div class="layer-bg w-100" style="-webkit-mask-image: linear-gradient(transparent, {{site.Params.theme_color}}); mask-image: linear-gradient(transparent, {{site.Params.theme_color}});">
-		 <img class="img-fluid w-100" src="{{site.Data.homepage.topImage.src}}" alt="bg-shape" style="filter: grayscale(100%);">
+		 <img decoding="async" class="img-fluid w-100" decoding="async" src="{{site.Data.homepage.topImage.src}}" alt="bg-shape" style="filter: grayscale(100%);">
      </div>
   {{ else }}
     <div class="layer-bg w-100">
-      <img class="img-fluid w-100" src="{{`images/illustrations/leaf-bg.png` | relURL}}" alt="bg-shape">
+      <img decoding="async" class="img-fluid w-100" src="{{`images/illustrations/leaf-bg.png` | relURL}}" alt="bg-shape">
     </div>
     <div class="layer" id="l2">
-      <img src="{{`images/illustrations/dots-cyan.svg` | relURL}}" alt="bg-shape">
+      <img decoding="async" src="{{`images/illustrations/dots-cyan.svg` | relURL}}" alt="bg-shape">
     </div>
     <div class="layer" id="l3">
-      <img src="{{`images/illustrations/leaf-orange.svg` | relURL}}" alt="bg-shape">
+      <img decoding="async" src="{{`images/illustrations/leaf-orange.svg` | relURL}}" alt="bg-shape">
     </div>
     <div class="layer" id="l4">
-      <img src="{{`images/illustrations/dots-orange.svg` | relURL}}" alt="bg-shape">
+      <img decoding="async" src="{{`images/illustrations/dots-orange.svg` | relURL}}" alt="bg-shape">
     </div>
     <div class="layer" id="l5">
-      <img src="{{`images/illustrations/leaf-yellow.svg` | relURL}}" alt="bg-shape">
+      <img decoding="async" src="{{`images/illustrations/leaf-yellow.svg` | relURL}}" alt="bg-shape">
     </div>
     <div class="layer" id="l6">
       <img src="{{`images/illustrations/leaf-cyan.svg` | relURL}}" alt="bg-shape">
     </div>
     <div class="layer" id="l7">
-      <img src="{{`images/illustrations/dots-group-orange.svg` | relURL}}" alt="bg-shape">
+      <img decoding="async" src="{{`images/illustrations/dots-group-orange.svg` | relURL}}" alt="bg-shape">
     </div>
     <div class="layer" id="l8">
-      <img src="{{`images/illustrations/leaf-pink-round.svg` | relURL}}" alt="bg-shape">
+      <img decoding="async" src="{{`images/illustrations/leaf-pink-round.svg` | relURL}}" alt="bg-shape">
     </div>
     <div class="layer" id="l9">
-      <img src="{{`images/illustrations/leaf-cyan-2.svg` | relURL}}" alt="bg-shape">
+      <img decoding="async" src="{{`images/illustrations/leaf-cyan-2.svg` | relURL}}" alt="bg-shape">
     </div>
       {{ end }}
 
@@ -129,7 +129,7 @@
         </div>
         {{ range .item }}
         <div class="col-lg-3 col-md-4 text-center">
-          <img src="{{.logo | relURL }}" alt="icon">
+          <img decoding="async" src="{{.logo | relURL }}" alt="icon">
           <p class="mb-0">{{.duration}}</p>
           <h4>{{.title }}</h4>
           <h6 class="text-light">{{.company }}</h6>
@@ -168,7 +168,7 @@
       </div>
     </div>
     <!-- bg image -->
-    <img class="img-fluid edu-bg-image w-100" src="{{`images/backgrounds/education-bg.png`|relURL}}" alt="bg-image">
+    <img decoding="async" class="img-fluid edu-bg-image w-100" src="{{`images/backgrounds/education-bg.png`|relURL}}" alt="bg-image">
   </section>
   <!-- /education -->
   {{ end }}
@@ -217,7 +217,7 @@
         {{ range first $item (where .Site.RegularPages "Section" "portfolio") }}
         <div class="col-lg-4 col-6 mb-4 shuffle-item">
           <div class="position-relative rounded hover-wrapper">
-            <img src="{{.Params.image | absURL }}" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
+            <img decoding="async" src="{{.Params.image | absURL }}" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
             <div class="hover-overlay">
               <div class="hover-content">
                 <a class="btn btn-light btn-sm" href="{{ .Permalink | safeURL }}">view project</a>
@@ -248,7 +248,7 @@
           <div class="text-center testimonial-content">
             <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i>
             <p class="text-white mb-4">{{.content | markdownify}}</p>
-            <img class="img-fluid rounded-circle mb-4 d-inline-block" src="{{.image | absURL }}" alt="client-image">
+            <img decoding="async" class="img-fluid rounded-circle mb-4 d-inline-block" src="{{.image | absURL }}" alt="client-image">
             <h4 class="text-white">{{.name }}</h4>
             <h6 class="text-light mb-4">{{ .designation }}</h6>
           </div>
@@ -257,12 +257,12 @@
       </div>
     </div>
     <!-- bg shapes -->
-    <img src="{{`images/backgrounds/map.png` | relURL }}" alt="map" class="img-fluid bg-map">
-    <img src="{{`images/illustrations/dots-group-v.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-1">
-    <img src="{{`images/illustrations/leaf-orange.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-2">
-    <img src="{{`images/illustrations/dots-group-sm.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-3">
-    <img src="{{`images/illustrations/leaf-pink-round.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-4">
-    <img src="{{`images/illustrations/leaf-cyan.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-5">
+    <img decoding="async" src="{{`images/backgrounds/map.png` | relURL }}" alt="map" class="img-fluid bg-map">
+    <img decoding="async" src="{{`images/illustrations/dots-group-v.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-1">
+    <img decoding="async" src="{{`images/illustrations/leaf-orange.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-2">
+    <img decoding="async" src="{{`images/illustrations/dots-group-sm.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-3">
+    <img decoding="async" src="{{`images/illustrations/leaf-pink-round.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-4">
+    <img decoding="async" src="{{`images/illustrations/leaf-cyan.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-5">
   </section>
   <!-- /testimonial -->
   {{ end }}
