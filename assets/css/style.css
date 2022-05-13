@@ -3,8 +3,6 @@
 PROJECT: Project Name
 VERSION: Versoin Number
 -------------------------------------------------------------------*/
-@import "https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400";
-
 body {
   line-height: 1.2;
   font-family: roboto, sans-serif;
@@ -224,7 +222,7 @@ a:hover {
 
 .section-title {
   margin-bottom: 80px;
-  font-family: Playfair Display, sans-serif;
+  font-family: serif;
   font-weight: 700;
 }
 
@@ -342,7 +340,7 @@ a:hover {
 }
 
 .font-secondary {
-  font-family: Playfair Display, sans-serif;
+  font-family: serif;
   font-weight: 700 !important;
 }
 
@@ -448,7 +446,7 @@ textarea.form-control {
 }
 
 .navbar .nav-item .nav-link {
-  font-family: Playfair Display, sans-serif;
+  font-family: serif;
   font-weight: 700;
   text-transform: uppercase;
   padding: 15px
