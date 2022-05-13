@@ -6,15 +6,6 @@ $(window).on('load', function() {
 (function($) {
 	'use strict';
 
-	// Sticky Menu
-	$(window).scroll(function() {
-		if ($('.navigation').offset().top > 100) {
-			$('.navigation').addClass('nav-bg');
-		} else {
-			$('.navigation').removeClass('nav-bg');
-		}
-	});
-
 	// Background-images
 	$('[data-background]').each(function() {
 		$(this).css({
@@ -158,3 +149,12 @@ $(window).on('load', function() {
 		]
 	});
 })(jQuery);
+
+window.onscroll = function() {
+	let nav = document.getElementById('navbar');
+	if (document.documentElement.scrollTop > 100) {
+		nav.classList.add('nav-bg');
+	} else {
+		nav.classList.remove('nav-bg');
+	}
+}
