@@ -12,6 +12,7 @@ body {
 }
 
 p {
+  text-indent: 1em;
   font-weight: 400;
   color: #4c4c4c;
   font-size: 15px;
