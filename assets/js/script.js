@@ -6,13 +6,6 @@ $(window).on('load', function() {
 (function($) {
 	'use strict';
 
-	// Background-images
-	$('[data-background]').each(function() {
-		$(this).css({
-			'background-image': 'url(' + $(this).data('background') + ')'
-		});
-	});
-
 	// background color
 	$('[data-color]').each(function() {
 		$(this).css({
