@@ -59,12 +59,12 @@
   <section class="section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-10 mx-auto text-center">
+        <div class="col-lg-10 mx-auto">
           {{ with site.Data.homepage.about }}
           <p class="font-secondary lead text-dark">{{.content | markdownify}}</p>
           {{ if .button.enable }}
           {{ with .button }}
-          <a href="{{ .URL | absURL }}" class="btn btn-transparent">{{.label}}</a>
+		  <div class="text-center"><a href="{{ .URL | absURL }}" class="btn btn-transparent">{{.label}}</a></div>
           {{ end }}
           {{ end }}
           {{ end }}
@@ -187,10 +187,12 @@
         {{ range .item }}
         <div class="col-md-4 mb-4">
           <div class="card {{if .highlighted }} active-bg-primary {{end}} hover-shadow shadow">
-            <div class="card-body text-center px-4 py-5">
-              <i class="{{.icon }} icon mb-5 d-inline-block"></i>
-              <h4 class="mb-4">{{.title}}</h4>
-              <p>{{.content | markdownify}}</p>
+            <div class="card-body px-4 py-5">
+			  <div class="text-center">
+                <i class="{{.icon }} icon mb-5 d-inline-block"></i>
+                <h4 class="mb-4">{{.title}}</h4>
+			  </div>
+              <div>{{.content | markdownify}}</div>
             </div>
           </div>
         </div>
