@@ -52,13 +52,13 @@
 </footer>
 <!-- /footer -->
 
-{{ "<!-- Google Map API -->" | safeHTML }}
 {{ if site.Params.map.enable }}
+{{ "<!-- Google Map API -->" | safeHTML }}
 <script src="{{ site.Params.map.gmap_api | safeURL }}"></script>
 {{ end }}
 
-{{ "<!-- JS Plugins -->" | safeHTML }}
 {{ range site.Params.plugins.js}}
+{{ "<!-- JS Plugins -->" | safeHTML }}
 <script src="{{ .link | absURL }}"></script>
 {{ end }}
 
@@ -67,8 +67,8 @@
 <script src="{{ $script.Permalink }}"></script>
 
 
-<!-- cookie -->
 {{ if site.Params.cookies.enable }}
+<!-- cookie -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
 <div id="js-cookie-box" class="cookie-box cookie-box-hide">
 	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
