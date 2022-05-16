@@ -62,6 +62,10 @@
 <script src="{{ .link | absURL }}"></script>
 {{ end }}
 
+{{ "<!-- Bootstrap script -->" | safeHTML }}
+{{ $bootstrap := resources.Get "js/bootstrap-native-v4.js" | minify}}
+<script async src="{{ $bootstrap.Permalink }}"></script>
+
 {{ "<!-- Main Script -->" | safeHTML }}
 {{ $script := resources.Get "js/script.js" | minify}}
 <script src="{{ $script.Permalink }}"></script>
