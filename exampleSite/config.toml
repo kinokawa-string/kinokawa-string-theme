@@ -14,8 +14,6 @@ link = "plugins/themify-icons/themify-icons.css"
 
 # js plugin
 [[params.plugins.js]]
-link = "plugins/jQuery/jquery.min.js"
-[[params.plugins.js]]
 link = "plugins/bootstrap/bootstrap-native-v4.min.js"
 [[params.plugins.js]]
 link = "plugins/google-map/map.js"
