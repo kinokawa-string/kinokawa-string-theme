@@ -1,6 +1,6 @@
 {{ if site.Params.preloader.enable }}
 {{ "<!-- preloader start -->" | safeHTML }}
-  <div class="preloader" style="background-color:{{ site.Params.theme_color }};font-size: 3ex;font-family:serif">
+  <div class="preloader" id="preloader" style="background-color:{{ site.Params.theme_color }};font-size: 3ex;font-family:serif">
     {{ if site.Params.preloader.content }}
   	{{ site.Params.preloader.content | markdownify }}
     {{ else }}

@@ -1,7 +1,7 @@
-// Preloader js
-$(window).on('load', function() {
-	$('.preloader').fadeOut(100);
-});
+window.onload = function() {
+	document.getElementById('preloader').style.opacity = "0";
+	document.getElementById('preloader').style.visibility = "hidden";
+}
 
 window.onscroll = function() {
 	let nav = document.getElementById('navbar');
