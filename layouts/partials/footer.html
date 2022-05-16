@@ -74,19 +74,17 @@
 	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
 </div>
 <script>
-	(function ($) {
-		const cookieBox = document.getElementById('js-cookie-box');
-		const cookieButton = document.getElementById('js-cookie-button');
-		if (!Cookies.get('cookie-box')) {
-			cookieBox.classList.remove('cookie-box-hide');
-			cookieButton.onclick = function () {
-				Cookies.set('cookie-box', true, {
-					expires: {{ site.Params.cookies.expire_days }}
-				});
-				cookieBox.classList.add('cookie-box-hide');
-			};
-		}
-	})(jQuery);
+	const cookieBox = document.getElementById('js-cookie-box');
+	const cookieButton = document.getElementById('js-cookie-button');
+	if (!Cookies.get('cookie-box')) {
+		cookieBox.classList.remove('cookie-box-hide');
+		cookieButton.onclick = function () {
+			Cookies.set('cookie-box', true, {
+				expires: {{ site.Params.cookies.expire_days }}
+			});
+			cookieBox.classList.add('cookie-box-hide');
+		};
+	}
 </script>
 
 <!-- cookie style -->
