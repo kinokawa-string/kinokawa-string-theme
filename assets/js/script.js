@@ -6,13 +6,6 @@ $(window).on('load', function() {
 (function($) {
 	'use strict';
 
-	// background color
-	$('[data-color]').each(function() {
-		$(this).css({
-			'background-color': $(this).data('color')
-		});
-	});
-
 	// progress bar
 	$('[data-progress]').each(function() {
 		$(this).css({
