@@ -2,12 +2,14 @@
   <article class="card shadow">
     <a href="{{.Permalink}}" title="{{.Title }}">
 		{{ with .Resources.GetMatch .Params.image }}
-			{{ $jpgImg := .Resize (printf "%dx%d jpg" .Width .Height) }}
-			{{ with .Resize (printf "%dx%d webp" .Width .Height) }}
-			<picture>
-				<source type="image/webp" srcset="{{ .RelPermalink }}">
-				<img class="rounded card-img-top" loading="lazy" src="{{ $jpgImg.RelPermalink }}" alt="{{ .Title }}">
-			</picture>
+			{{ with .Fill "500x300 Top" }}
+				{{ $jpgImg := .Resize "500x jpg" }}
+				{{ with .Resize "500x webp" }}
+					<picture>
+						<source type="image/webp" srcset="{{ .RelPermalink }}">
+						<img class="rounded card-img-top" decoding="async" src="{{ $jpgImg.RelPermalink }}" alt="{{ .Title }}">
+					</picture>
+				{{ end }}
 			{{ end }}
 		{{ end }}
 	</a>
