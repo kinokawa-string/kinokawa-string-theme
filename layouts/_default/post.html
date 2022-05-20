@@ -1,6 +1,16 @@
 <div class="col-lg-4 col-sm-6 mb-4">
   <article class="card shadow">
-    <a href="{{.Permalink}}" title="{{.Title }}"><img class="rounded card-img-top" loading="lazy" decoding="async" src="{{.Params.Image | relURL}}" alt="{{.Title }}"></a>
+    <a href="{{.Permalink}}" title="{{.Title }}">
+		{{ with .Resources.GetMatch .Params.image }}
+			{{ $jpgImg := .Resize (printf "%dx%d jpg" .Width .Height) }}
+			{{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+			<picture>
+				<source type="image/webp" srcset="{{ .RelPermalink }}">
+				<img class="rounded card-img-top" loading="lazy" src="{{ $jpgImg.RelPermalink }}" alt="{{ .Title }}">
+			</picture>
+			{{ end }}
+		{{ end }}
+	</a>
     <div class="card-body">
       <h4 class="card-title"><a class="text-dark" href="{{.Permalink}}">{{.Title }}</a>
       </h4>
