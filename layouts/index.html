@@ -10,10 +10,18 @@
       </div>
     </div>
 
-  {{ if site.Data.homepage.topImage.enable }}
+  {{ if site.Data.homepage.topImage }}
 	<div class="layer-bg w-100" style="-webkit-mask-image: linear-gradient(transparent, {{site.Params.theme_color}}); mask-image: linear-gradient(transparent, {{site.Params.theme_color}});">
-		 <img decoding="async" class="img-fluid w-100" decoding="async" src="{{site.Data.homepage.topImage.src}}" alt="bg-shape" style="filter: grayscale(100%);">
-     </div>
+		{{ with resources.Get site.Data.homepage.topImage }}
+			{{ $jpgImg := .Resize (printf "%dx%d jpg" .Width .Height) }}
+			{{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+			<picture>
+				<source type="image/webp" srcset="{{ .RelPermalink }}">
+				<img decoding="async" width="{{ .Width }}" height="{{ .Height }}" class="img-fluid w-100" decoding="async" src="{{ $jpgImg.RelPermalink }}" alt="bg-shape">
+			</picture>
+			{{ end }}
+		{{ end }}
+	</div>
   {{ else }}
     <div class="layer-bg w-100">
       <img decoding="async" class="img-fluid w-100" src="{{`images/illustrations/leaf-bg.png` | relURL}}" alt="bg-shape">
