@@ -90,7 +90,7 @@
         <div class="col-12 text-center">
           <h2 class="section-title">{{site.Data.homepage.pr.category }}</h2>
         </div>
-		{{ range first 2 ( where .Site.Pages ".Params.categories" "intersect" (slice site.Data.homepage.pr.category) )}}
+		{{ range (first 2 ( where .Site.Pages ".Params.categories" "intersect" (slice site.Data.homepage.pr.category) )).Reverse }}
         {{ .Render "post" }}
         {{ end }}
       </div>
@@ -220,7 +220,7 @@
         <div class="col-12 text-center">
           <h2 class="section-title">{{site.Data.homepage.blog.title | markdownify }}</h2>
         </div>
-        {{ range first 3 (where .Site.RegularPages "Section" "blog")}}
+        {{ range (first 3 (where .Site.RegularPages "Section" "blog")).Reverse }}
         {{ .Render "post" }}
         {{ end }}
       </div>
