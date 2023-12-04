@@ -4,20 +4,23 @@ PROJECT: Project Name
 VERSION: Versoin Number
 -------------------------------------------------------------------*/
 @import "bootstrap";
+$mobile: 700px;
 
 body {
   line-height: 1.2;
   font-family: serif;
   -webkit-font-smoothing: antialiased;
-  font-size: 15px;
+  font-size: 18px;
   color: #4c4c4c;
+  @media (max-width: $mobile) {
+    font-size: 15px;
+  }
 }
 
 p {
   text-indent: 1em;
   font-weight: 400;
   color: #5c5c5c;
-  font-size: 15px;
   line-height: 1.8;
 }
 
@@ -31,55 +34,46 @@ h6 {
   line-height: 1.2;
 }
 
-h1,
-.h1 {
-  font-size: 80px;
+h1 {
+  font-size: 5.33rem;
 }
 
 @media (max-width: 991px) {
-  h1,
-  .h1 {
-    font-size: 45px;
+  h1 {
+    font-size: 3rem;
   }
 }
 
-h2,
-.h2 {
-  font-size: 60px;
+h2 {
+  font-size: 4rem;
 }
 
 @media (max-width: 991px) {
-  h2,
-  .h2 {
-    font-size: 30px;
+  h2 {
+    font-size: 2rem;
   }
 }
 
-h3,
-.h3 {
-  font-size: 25px;
+h3 {
+  font-size: 1.66rem;
 }
 
 @media (max-width: 991px) {
-  h3,
-  .h3 {
-    font-size: 19px;
+  h3 {
+    font-size: 1.26rem;
   }
 }
 
-h4,
-.h4 {
-  font-size: 19px;
+h4 {
+  font-size: 1.26rem;
 }
 
-h5,
-.h5 {
-  font-size: 17px;
+h5 {
+  font-size: 1.13rem;
 }
 
-h6,
-.h6 {
-  font-size: 14px;
+h6 {
+  font-size: 0.93rem;
 }
 
 .btn {
@@ -661,7 +655,7 @@ blockquote {
   background: #eaeaea;
   border-left: 2px solid var(--primary-color);
   font-style: italic;
-  font-size: 22px;
+  font-size: 1.46rem;
 }
 
 .content * {
@@ -669,7 +663,7 @@ blockquote {
 }
 
 .content strong {
-  font-size: 22px;
+  font-size: 1.46rem;
   font-weight: 400;
   color: #000;
   display: inherit;
@@ -826,14 +820,30 @@ blockquote {
   text-align: center;
   display: block;
   box-shadow: 0 18px 39.1px 6.9px rgba(224, 241, 255, 0.34);
-  font-size: 30px;
+  font-size: 2rem;
 }
 
 .project-meta h4 {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.6rem;
 }
 
 .project-meta p {
   margin-bottom: 0;
 }
+
+table {
+  width: 0;
+  overflow: scroll;
+  font-size: 1.2rem;
+  td, th {
+    padding: .5rem;
+  }
+  th {
+    border-bottom: 3px double;
+  }
+  td {
+    padding-right: .5em;
+  }
+}
+
